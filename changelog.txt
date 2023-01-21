@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 21.01.2023
+  Features:
+    - Initial release
+  Info:
+    - Improved graphics and animations are a work in progress

@@ -1,2 +1,3 @@
 # VehicleDeployer
-Factorio vehicle deployer mod
+
+Automate the deployment of your vehicles.
