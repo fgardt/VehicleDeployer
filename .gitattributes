@@ -3,3 +3,12 @@
 
 # files that should not be modified
 *.png binary
+
+# files that should not get included in a release zip
+README.md export-ignore
+.vscode export-ignore
+.git export-ignore
+.github export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
+.releaserc export-ignore
