@@ -1,13 +1,13 @@
 {
-    "name": "vehicle-deployer",
-    "version": "1.0.2",
-    "title": "Vehicle deployer",
-    "author": "fgardt",
-    "homepage": "https://github.com/fgardt/vehicle-deployer",
-    "description": "Automate the deployment of your vehicles by using a vehicle deployer.",
-    "factorio_version": "1.1",
-    "dependencies": [
-        "base",
-        "(?) space-exploration"
-    ]
+  "name": "vehicle-deployer",
+  "version": "1.0.3",
+  "title": "Vehicle deployer",
+  "author": "fgardt",
+  "homepage": "https://github.com/fgardt/vehicle-deployer",
+  "description": "Automate the deployment of your vehicles by using a vehicle deployer.",
+  "factorio_version": "1.1",
+  "dependencies": [
+    "base",
+    "(?) space-exploration"
+  ]
 }
