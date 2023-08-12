@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2023-08-12
+  Bugfixes:
+    - Fixed potential crash when some other entities get destroyed
+    - Fixed startup crash caused by internal name mismatches
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2023-07-27
   Bugfixes:
