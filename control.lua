@@ -82,7 +82,7 @@ script.on_nth_tick(1, function()
         if deployer.in_progress and entity.crafting_progress == 1 then
             local item = deployer.storage[1]
             local spawn_res = deployer.surface.create_entity({
-                name = item.name,
+                name = game.item_prototypes[item.name].place_result.name,
                 position = deployer.deploy_pos,
                 direction = entity.direction,
                 force = entity.force,
