@@ -48,13 +48,18 @@ local function deployer_built(event)
 end
 
 -- register all build events and filter for vehicle-deployer
-script.on_event(ev.on_built_entity, deployer_built, {{filter = "name", name = "vehicle-deployer"}})
-script.on_event(ev.on_robot_built_entity, deployer_built, {{filter = "name", name = "vehicle-deployer"}})
-script.on_event(ev.script_raised_built, deployer_built, {{filter = "name", name = "vehicle-deployer"}})
-script.on_event(ev.script_raised_revive, deployer_built, {{filter = "name", name = "vehicle-deployer"}})
+script.on_event(ev.on_built_entity, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
+script.on_event(ev.on_robot_built_entity, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
+script.on_event(ev.script_raised_built, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
+script.on_event(ev.script_raised_revive, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
 
 
 script.on_event(ev.on_entity_destroyed, function(event)
+    -- ignore if entity has no unit_number -> definitely not a deployer
+    -- correct way to do this is to keep track of all the registrations
+    -- and check if we have registered the entity that was destroyed
+    if event.unit_number ~= nil then return end
+
     global.deployers[event.unit_number] = nil
 end)
 
@@ -76,7 +81,7 @@ script.on_nth_tick(1, function()
         -- check if the deployment of the current vehicle is finished
         if deployer.in_progress and entity.crafting_progress == 1 then
             local item = deployer.storage[1]
-            local spawn_res = deployer.surface.create_entity{
+            local spawn_res = deployer.surface.create_entity({
                 name = item.name,
                 position = deployer.deploy_pos,
                 direction = entity.direction,
@@ -86,7 +91,7 @@ script.on_nth_tick(1, function()
                 create_build_effect_smoke = true,
                 move_stuck_players = true,
                 item = item
-            }
+            })
 
             entity.active = false
             deployer.active = false
