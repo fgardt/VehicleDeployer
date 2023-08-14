@@ -58,7 +58,7 @@ script.on_event(ev.on_entity_destroyed, function(event)
     -- ignore if entity has no unit_number -> definitely not a deployer
     -- correct way to do this is to keep track of all the registrations
     -- and check if we have registered the entity that was destroyed
-    if event.unit_number ~= nil then return end
+    if event.unit_number == nil then return end
 
     global.deployers[event.unit_number] = nil
 end)
