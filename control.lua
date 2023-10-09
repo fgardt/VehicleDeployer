@@ -48,10 +48,10 @@ local function deployer_built(event)
 end
 
 -- register all build events and filter for vehicle-deployer
-script.on_event(ev.on_built_entity, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
-script.on_event(ev.on_robot_built_entity, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
-script.on_event(ev.script_raised_built, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
-script.on_event(ev.script_raised_revive, deployer_built, { { filter = "name", name = "vehicle-deployer" } })
+script.on_event(ev.on_built_entity, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
+script.on_event(ev.on_robot_built_entity, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
+script.on_event(ev.script_raised_built, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
+script.on_event(ev.script_raised_revive, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
 
 
 script.on_event(ev.on_entity_destroyed, function(event)

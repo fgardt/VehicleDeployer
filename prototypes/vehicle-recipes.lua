@@ -1,7 +1,7 @@
 -- add deploy recipe category
 data:extend({ {
     type = "recipe-category",
-    name = "vehicle-deployment"
+    name = "VD_vehicle-deployment"
 } })
 
 -- get all vehicles to make recipes for
@@ -38,10 +38,10 @@ for name, vehicle in pairs(vehicles) do
     for _, item in pairs(items) do
         data:extend({ {
             type = "recipe",
-            name = "vehicle-deploy-" .. name .. "-" .. item.name,
+            name = "VD_vehicle-deploy-" .. name .. "-" .. item.name,
             hide_from_player_crafting = true,
             enabled = true,
-            category = "vehicle-deployment",
+            category = "VD_vehicle-deployment",
             ingredients = { { item.name, 1 } },
             result = item.name,
             energy_required = 10,

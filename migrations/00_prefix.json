@@ -1,0 +1,32 @@
+{
+    "entity": [
+        [
+            "vehicle-deployer",
+            "VD_vehicle-deployer"
+        ]
+    ],
+    "item": [
+        [
+            "vehicle-deployer",
+            "VD_vehicle-deployer"
+        ]
+    ],
+    "recipe": [
+        [
+            "vehicle-deployer",
+            "VD_vehicle-deployer"
+        ]
+    ],
+    "technology": [
+        [
+            "vehicle-deployer",
+            "VD_vehicle-deployer"
+        ]
+    ],
+    "recipe-category": [
+        [
+            "vehicle-deployment",
+            "VD_vehicle-deployment"
+        ]
+    ]
+}

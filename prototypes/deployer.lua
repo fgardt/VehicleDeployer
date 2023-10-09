@@ -11,16 +11,16 @@ local deployer_icon = {
 local entity_graphics_path = graphics_path .. "entity/vehicle-deployer/"
 local entity = {
     type = "furnace",
-    name = "vehicle-deployer",
-    icons = {deployer_icon},
-    
+    name = "VD_vehicle-deployer",
+    icons = { deployer_icon },
+
     source_inventory_size = 1,
     result_inventory_size = 0,
     base_productivity = 0,
     crafting_speed = 1,
-    crafting_categories = {"vehicle-deployment"},
-    allowed_effects = {"consumption", "pollution"},
-    module_specification = {module_slots = 0},
+    crafting_categories = { "VD_vehicle-deployment" },
+    allowed_effects = { "consumption", "pollution" },
+    module_specification = { module_slots = 0 },
 
     energy_usage = "313kW",
     energy_source = {
@@ -37,11 +37,11 @@ local entity = {
     is_military_target = false,
     alert_when_damaged = true,
 
-    collision_box = {{-1.2, -0.7}, {1.2, 0.7}},
-    selection_box = {{-1.5, -1.0}, {1.5, 1.0}},
+    collision_box = { { -1.2, -0.7 }, { 1.2, 0.7 } },
+    selection_box = { { -1.5, -1.0 }, { 1.5, 1.0 } },
     minable = {
         mining_time = 0.75,
-        result = "vehicle-deployer"
+        result = "VD_vehicle-deployer"
     },
 
     flags = {
@@ -74,14 +74,14 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {0, 0},
+                    position = { 0, 0 },
                     scale = 0.5,
                     hr_version = {
                         filename = entity_graphics_path .. "hr-base.png",
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {0, 0},
+                        position = { 0, 0 },
                         scale = 0.25
                     }
                 },
@@ -90,7 +90,7 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {0, 0},
+                    position = { 0, 0 },
                     scale = 0.5,
                     draw_as_shadow = true,
                     hr_version = {
@@ -98,7 +98,7 @@ local entity = {
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {0, 0},
+                        position = { 0, 0 },
                         scale = 0.25,
                         draw_as_shadow = true
                     }
@@ -112,14 +112,14 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {272, 0},
+                    position = { 272, 0 },
                     scale = 0.5,
                     hr_version = {
                         filename = entity_graphics_path .. "hr-base.png",
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {544, 0},
+                        position = { 544, 0 },
                         scale = 0.25
                     }
                 },
@@ -128,7 +128,7 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {272, 0},
+                    position = { 272, 0 },
                     scale = 0.5,
                     draw_as_shadow = true,
                     hr_version = {
@@ -136,7 +136,7 @@ local entity = {
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {544, 0},
+                        position = { 544, 0 },
                         scale = 0.25,
                         draw_as_shadow = true
                     }
@@ -150,14 +150,14 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {0, 272},
+                    position = { 0, 272 },
                     scale = 0.5,
                     hr_version = {
                         filename = entity_graphics_path .. "hr-base.png",
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {0, 544},
+                        position = { 0, 544 },
                         scale = 0.25
                     }
                 },
@@ -166,7 +166,7 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {0, 272},
+                    position = { 0, 272 },
                     scale = 0.5,
                     draw_as_shadow = true,
                     hr_version = {
@@ -174,7 +174,7 @@ local entity = {
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {0, 544},
+                        position = { 0, 544 },
                         scale = 0.25,
                         draw_as_shadow = true
                     }
@@ -188,14 +188,14 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {272, 272},
+                    position = { 272, 272 },
                     scale = 0.5,
                     hr_version = {
                         filename = entity_graphics_path .. "hr-base.png",
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {544, 544},
+                        position = { 544, 544 },
                         scale = 0.25
                     }
                 },
@@ -204,7 +204,7 @@ local entity = {
                     frame_count = 1,
                     height = 272,
                     width = 272,
-                    position = {272, 272},
+                    position = { 272, 272 },
                     scale = 0.5,
                     draw_as_shadow = true,
                     hr_version = {
@@ -212,7 +212,7 @@ local entity = {
                         frame_count = 1,
                         height = 544,
                         width = 544,
-                        position = {544, 544},
+                        position = { 544, 544 },
                         scale = 0.25,
                         draw_as_shadow = true
                     }
@@ -226,14 +226,14 @@ local entity = {
         rotate = false,
         pictures = {
             filename = entity_graphics_path .. "lr-reflection.png",
-            size = {272, 272},
+            size = { 272, 272 },
             priority = "extra-high",
             variation_count = 4,
             line_length = 2,
             scale = 0.5,
             hr_version = {
                 filename = entity_graphics_path .. "hr-reflection.png",
-                size = {544, 544},
+                size = { 544, 544 },
                 priority = "extra-high",
                 variation_count = 4,
                 line_length = 2,
@@ -246,13 +246,13 @@ local entity = {
 -- item
 local item = {
     type = "item",
-    name = "vehicle-deployer",
-    icons = {deployer_icon},
+    name = "VD_vehicle-deployer",
+    icons = { deployer_icon },
 
     stack_size = 10,
     default_request_amount = 5,
 
-    place_result = "vehicle-deployer",
+    place_result = "VD_vehicle-deployer",
     subgroup = "transport",
     order = "z[vehicle-deployer]"
 }
@@ -260,14 +260,14 @@ local item = {
 -- recipe
 local recipe = {
     type = "recipe",
-    name = "vehicle-deployer",
+    name = "VD_vehicle-deployer",
     enabled = false,
     ingredients = {
-        {"processing-unit", 50},
-        {"steel-plate", 15},
-        {"electric-engine-unit", 10}
+        { "processing-unit",      50 },
+        { "steel-plate",          15 },
+        { "electric-engine-unit", 10 }
     },
-    result = "vehicle-deployer",
+    result = "VD_vehicle-deployer",
     result_count = 1,
     energy_required = 10
 }
@@ -275,24 +275,24 @@ local recipe = {
 -- technology
 local technology = {
     type = "technology",
-    name = "vehicle-deployer",
+    name = "VD_vehicle-deployer",
     icon = graphics_path .. "technology/vehicle-deployer.png",
     icon_mipmaps = 4,
     icon_size = 256,
     effects = {
         {
             type = "unlock-recipe",
-            recipe = "vehicle-deployer"
+            recipe = "VD_vehicle-deployer"
         }
     },
-    prerequisites = {"utility-science-pack"},
+    prerequisites = { "utility-science-pack" },
     unit = {
         count = 125,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"utility-science-pack", 1}
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack",   1 },
+            { "chemical-science-pack",   1 },
+            { "utility-science-pack",    1 }
         },
         time = 45
     },
@@ -300,4 +300,4 @@ local technology = {
 }
 
 
-data:extend({entity, item, recipe, technology})
+data:extend({ entity, item, recipe, technology })
