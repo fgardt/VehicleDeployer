@@ -21,7 +21,15 @@ end
 for name, vehicle in pairs(vehicles) do
     local items = {}
     if vehicle.placeable_by then
-        items = vehicle.placeable_by
+        if vehicle.placeable_by.item then
+            -- singular item
+            table.insert(items, { name = vehicle.placeable_by.item })
+        else
+            -- array of items
+            for _, i in pairs(vehicle.placeable_by) do
+                table.insert(items, { name = i.item })
+            end
+        end
     else
         -- check ALL items if they place this vehicle
         for _, item in pairs(data.raw["item-with-entity-data"]) do
