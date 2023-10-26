@@ -2,9 +2,11 @@
 data:extend({ {
     type = "recipe-category",
     name = "VD_vehicle-deployment"
-} })
+} --[[@as data.RecipeCategory]]
+})
 
 -- get all vehicles to make recipes for
+---@type data.VehiclePrototype[]
 local vehicles = {}
 
 -- car vehicles
@@ -56,7 +58,8 @@ for name, vehicle in pairs(vehicles) do
             allow_inserter_overload = false,
             overload_multiplier = 1,
             order = "z[vehicle-deployer-" .. name .. "-" .. item.name .. "]"
-        } })
+        } --[[@as data.RecipePrototype]]
+        })
     end
 
     ::continue::

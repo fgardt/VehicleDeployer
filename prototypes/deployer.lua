@@ -1,6 +1,7 @@
 local graphics_path = "__vehicle-deployer__/graphics/"
 
 -- icon
+---@type data.IconData
 local deployer_icon = {
     icon = graphics_path .. "icon/vehicle-deployer.png",
     icon_mipmaps = 4,
@@ -9,6 +10,8 @@ local deployer_icon = {
 
 -- entity
 local entity_graphics_path = graphics_path .. "entity/vehicle-deployer/"
+
+---@type data.FurnacePrototype
 local entity = {
     type = "furnace",
     name = "VD_vehicle-deployer",
@@ -244,6 +247,7 @@ local entity = {
 }
 
 -- item
+---@type data.ItemPrototype
 local item = {
     type = "item",
     name = "VD_vehicle-deployer",
@@ -258,6 +262,7 @@ local item = {
 }
 
 -- recipe
+---@type data.RecipePrototype
 local recipe = {
     type = "recipe",
     name = "VD_vehicle-deployer",
@@ -273,6 +278,7 @@ local recipe = {
 }
 
 -- technology
+---@type data.TechnologyPrototype
 local technology = {
     type = "technology",
     name = "VD_vehicle-deployer",
