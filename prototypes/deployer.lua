@@ -1,4 +1,5 @@
-local graphics_path = "__vehicle-deployer__/graphics/"
+local const = require("const")
+local graphics_path = const.ROOT .. "/graphics/"
 
 -- icon
 ---@type data.IconData
@@ -14,14 +15,14 @@ local entity_graphics_path = graphics_path .. "entity/vehicle-deployer/"
 ---@type data.FurnacePrototype
 local entity = {
     type = "furnace",
-    name = "VD_vehicle-deployer",
+    name = const.ENTITY,
     icons = { deployer_icon },
 
     source_inventory_size = 1,
     result_inventory_size = 0,
     base_productivity = 0,
     crafting_speed = 1,
-    crafting_categories = { "VD_vehicle-deployment" },
+    crafting_categories = { const.CATEGORY },
     allowed_effects = { "consumption", "pollution" },
     module_specification = { module_slots = 0 },
 
@@ -44,7 +45,7 @@ local entity = {
     selection_box = { { -1.5, -1.0 }, { 1.5, 1.0 } },
     minable = {
         mining_time = 0.75,
-        result = "VD_vehicle-deployer"
+        result = const.ENTITY
     },
 
     flags = {
@@ -250,13 +251,13 @@ local entity = {
 ---@type data.ItemPrototype
 local item = {
     type = "item",
-    name = "VD_vehicle-deployer",
+    name = const.ENTITY,
     icons = { deployer_icon },
 
     stack_size = 10,
     default_request_amount = 5,
 
-    place_result = "VD_vehicle-deployer",
+    place_result = const.ENTITY,
     subgroup = "transport",
     order = "z[vehicle-deployer]"
 }
@@ -265,14 +266,14 @@ local item = {
 ---@type data.RecipePrototype
 local recipe = {
     type = "recipe",
-    name = "VD_vehicle-deployer",
+    name = const.ENTITY,
     enabled = false,
     ingredients = {
         { "processing-unit",      50 },
         { "steel-plate",          15 },
         { "electric-engine-unit", 10 }
     },
-    result = "VD_vehicle-deployer",
+    result = const.ENTITY,
     result_count = 1,
     energy_required = 10
 }
@@ -281,14 +282,14 @@ local recipe = {
 ---@type data.TechnologyPrototype
 local technology = {
     type = "technology",
-    name = "VD_vehicle-deployer",
+    name = const.ENTITY,
     icon = graphics_path .. "technology/vehicle-deployer.png",
     icon_mipmaps = 4,
     icon_size = 256,
     effects = {
         {
             type = "unlock-recipe",
-            recipe = "VD_vehicle-deployer"
+            recipe = const.ENTITY
         }
     },
     prerequisites = { "utility-science-pack" },

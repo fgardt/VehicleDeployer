@@ -1,7 +1,9 @@
+local const = require("const")
+
 -- add deploy recipe category
 data:extend({ {
     type = "recipe-category",
-    name = "VD_vehicle-deployment"
+    name = const.CATEGORY
 } --[[@as data.RecipeCategory]]
 })
 
@@ -48,10 +50,10 @@ for name, vehicle in pairs(vehicles) do
     for _, item in pairs(items) do
         data:extend({ {
             type = "recipe",
-            name = "VD_vehicle-deploy-" .. name .. "-" .. item.name,
+            name = const.PREFIX .. "vehicle-deploy-" .. name .. "-" .. item.name,
             hide_from_player_crafting = true,
             enabled = true,
-            category = "VD_vehicle-deployment",
+            category = const.CATEGORY,
             ingredients = { { item.name, 1 } },
             result = item.name,
             energy_required = 10,

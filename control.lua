@@ -1,3 +1,4 @@
+local const = require("const")
 local ev = defines.events
 local deploy_offset = 3.5
 
@@ -48,10 +49,10 @@ local function deployer_built(event)
 end
 
 -- register all build events and filter for vehicle-deployer
-script.on_event(ev.on_built_entity, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
-script.on_event(ev.on_robot_built_entity, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
-script.on_event(ev.script_raised_built, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
-script.on_event(ev.script_raised_revive, deployer_built, { { filter = "name", name = "VD_vehicle-deployer" } })
+script.on_event(ev.on_built_entity, deployer_built, { { filter = "name", name = const.ENTITY } })
+script.on_event(ev.on_robot_built_entity, deployer_built, { { filter = "name", name = const.ENTITY } })
+script.on_event(ev.script_raised_built, deployer_built, { { filter = "name", name = const.ENTITY } })
+script.on_event(ev.script_raised_revive, deployer_built, { { filter = "name", name = const.ENTITY } })
 
 
 script.on_event(ev.on_entity_destroyed, function(event)
